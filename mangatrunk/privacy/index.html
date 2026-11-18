@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MangaTrunk のプライバシーポリシー</title>
+<style>
+  :root { --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --link: #0b63c5; --rule: #d2d2d7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #1c1c1e; --link: #6cb4ff; --rule: #3a3a3c; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.8; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  h1 { font-size: 1.7rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  .lead { color: var(--muted); margin-top: 0; }
+  a { color: var(--link); overflow-wrap: anywhere; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  ul { padding-left: 1.3rem; }
+  footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>MangaTrunk のプライバシーポリシー</h1>
+  <p class="lead">定めた日: 2026 年 11 月 19 日</p>
+
+  <p>このポリシーは、MangaTrunk（Mac 版と Android 版。以下「アプリ」）が、どんな情報を、どう扱うかを説明します。</p>
+
+  <h2>1. 開発者が受け取る情報</h2>
+  <p>ありません。アプリは、開発者のサーバーに何も送りません（開発者のサーバーはありません）。広告、利用状況の分析、落ちたときの報告の送信も行いません。</p>
+
+  <h2>2. 端末の中に置く情報</h2>
+  <p>本棚（登録したフォルダの場所、作品と巻の一覧、表紙の画像）、読んだ位置と読了の印、アプリの設定は、端末の中にだけ置きます。漫画のファイルは読むだけで、書き換えません。NAS に直接つなぐ Android 版では、NAS のパスワードを端末の中に置きます。</p>
+
+  <h2>3. Google のアカウントで共有するとき</h2>
+  <p>読んだ位置を端末どうしで共有するのは、あなたが設定の画面で Google のアカウントにログインしたときだけです。</p>
+
+  <h3>求める権限</h3>
+  <p>求めるのは、Google ドライブの、このアプリだけが使う隠れた場所（appDataFolder）を読み書きする権限（<code>https://www.googleapis.com/auth/drive.appdata</code>）だけです。この権限では、あなたのドライブのほかのファイルやフォルダは、見ることも読むこともできません。</p>
+
+  <h3>読み書きするもの</h3>
+  <ul>
+    <li><strong>同期のファイル:</strong> 端末ごとに1つ、appDataFolder に置きます。中身は次のものだけです。
+      <ul>
+        <li>漫画のファイルの中身（ページの画像）から計算した識別子。作品名やファイル名、フォルダの場所は入れません。</li>
+        <li>読んだページの位置（何ページ目か、ページ数、そのページの画像から計算した値）、読了の印、未読に戻した印と、それぞれの時刻。</li>
+        <li>アプリが作った端末の識別子（乱数）、端末の名前、OS の種類、アプリの版。</li>
+      </ul>
+    </li>
+    <li><strong>端末の名前について:</strong> 最初は、端末の名前（Mac はコンピュータ名、Android は設定のデバイス名）を使います。コンピュータ名には、あなたの名前が入っていることがあります。名前は、アプリの設定の画面で変えられます。</li>
+    <li><strong>アカウントの情報:</strong> どのアカウントでログインしているかを設定の画面に出すため、ログインしたときに、アカウントの識別子とメールアドレス（または表示名）をドライブから読みます。これは端末の中にだけ置き、どこにも送りません。</li>
+  </ul>
+
+  <h3>使い道</h3>
+  <p>同じ Google のアカウントでログインした、あなたの端末どうしで、読んだ位置と読了の印をそろえるためだけに使います。広告、分析、AI や機械学習の学習には使いません。ほかの人やほかの会社に渡しません。</p>
+  <p>MangaTrunk が Google API から受け取った情報の使用と、ほかのアプリへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>（限定的な使用の要件を含む）に従います。</p>
+
+  <h3>ログインの情報の置き場所</h3>
+  <p>Mac 版は、ログインを続けるための情報（更新トークン）を、Mac のキーチェーンに置きます。Android 版は、アプリでは持たず、Google Play 開発者サービスが持ちます。どちらも、開発者には送りません。</p>
+
+  <h2>4. 共有をやめる・消す</h2>
+  <ul>
+    <li><strong>この端末でログアウト:</strong> その端末のログインの情報を捨てます。ほかの端末の共有は続きます。</li>
+    <li><strong>すべての端末で共有をやめる:</strong> アプリへの Google の許可を取り消します。あなたのすべての端末で、共有が止まります。<a href="https://myaccount.google.com/connections">Google のアカウントの設定</a>からも取り消せます。</li>
+    <li><strong>ドライブに置いたファイルを消す:</strong> 同期のファイルは、あなたが消すまで、あなたのドライブに残ります。Google ドライブ（ウェブ）の設定の「アプリを管理」で、MangaTrunk の隠れたアプリのデータを削除できます。端末がログインしたままだと、次の同期で作り直されるので、先に「すべての端末で共有をやめる」を行ってください。</li>
+    <li>ログアウトしても、端末の中の読んだ位置は消えません。端末の中のものを消すには、アプリを消してください（Mac 版は、アプリを消してもデータが残るので、手放す Mac は初期化してください）。</li>
+  </ul>
+
+  <h2>5. このポリシーを変えるとき</h2>
+  <p>このページを書き換え、上の「定めた日」を改めます。</p>
+
+  <h2>6. 連絡先</h2>
+  <p>ご質問や不具合の報告は、GitHub の <a href="https://github.com/tori-ryu/tori-ryu.github.io/issues">Issues</a> にお寄せください（GitHub のアカウントが要ります）。</p>
+
+  <footer><a href="../">MangaTrunk</a></footer>
+</main>
+</body>
+</html>
